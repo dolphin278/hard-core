@@ -1,0 +1,32 @@
+{
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-core": "^6.22.1",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "flow-bin": "^0.38.0",
+    "jest-cli": "^18.1.0",
+    "trek-router": "git://github.com/trekjs/router"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "babel -D src/ --out-dir build/",
+    "flow": "flow"
+  },
+  "name": "hard-core",
+  "version": "1.0.0",
+  "description": "fast http framework",
+  "main": "index.js",
+  "repository": "git@github.com:dolphin278/hard-core.git",
+  "author": "Boris Egorov <dolphin278@gmail.com>",
+  "license": "MIT",
+  "jest": {
+    "testEnvironment": "node",
+    "testPathDirs": [
+      "<rootDir>/src"
+    ]
+  },
+  "dependencies": {
+    "invariant": "^2.2.2"
+  }
+}
