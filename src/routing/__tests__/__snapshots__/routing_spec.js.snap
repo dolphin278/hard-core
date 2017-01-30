@@ -1,0 +1,314 @@
+exports[`Routing #buildTree builds tree 1`] = `
+Object {
+  "GET": Node {
+    "children": Object {
+      "about": Node {
+        "children": Object {},
+        "paramNames": Object {},
+        "routes": Array [
+          Route {
+            "handler": [Function],
+            "id": 1,
+            "method": "GET",
+            "parametersMap": Array [],
+            "path": "/about/",
+          },
+        ],
+        "value": "about",
+      },
+      "my": Node {
+        "children": Object {
+          "super": Node {
+            "children": Object {
+              "long": Node {
+                "children": Object {
+                  "about": Node {
+                    "children": Object {
+                      "page": Node {
+                        "children": Object {},
+                        "paramNames": Object {},
+                        "routes": Array [
+                          Route {
+                            "handler": [Function],
+                            "id": 10,
+                            "method": "GET",
+                            "parametersMap": Array [],
+                            "path": "/my/super/long/about/page/",
+                          },
+                        ],
+                        "value": "page",
+                      },
+                    },
+                    "paramNames": Object {},
+                    "routes": Array [],
+                    "value": "about",
+                  },
+                },
+                "paramNames": Object {},
+                "routes": Array [],
+                "value": "long",
+              },
+            },
+            "paramNames": Object {},
+            "routes": Array [],
+            "value": "super",
+          },
+        },
+        "paramNames": Object {},
+        "routes": Array [],
+        "value": "my",
+      },
+      "posts": Node {
+        "children": Object {
+          "*": Node {
+            "children": Object {
+              "comments": Node {
+                "children": Object {
+                  "*": Node {
+                    "children": Object {},
+                    "paramNames": Object {},
+                    "routes": Array [
+                      Route {
+                        "handler": [Function],
+                        "id": 7,
+                        "method": "GET",
+                        "parametersMap": Array [
+                          Array [
+                            "postId",
+                            0,
+                          ],
+                          Array [
+                            "commentId",
+                            1,
+                          ],
+                        ],
+                        "path": "/posts/:postId/comments/:commentId/",
+                      },
+                    ],
+                    "value": "*",
+                  },
+                },
+                "paramNames": Object {
+                  "7": "commentId",
+                },
+                "routes": Array [
+                  Route {
+                    "handler": [Function],
+                    "id": 6,
+                    "method": "GET",
+                    "parametersMap": Array [
+                      Array [
+                        "postId",
+                        0,
+                      ],
+                    ],
+                    "path": "/posts/:postId/comments/",
+                  },
+                ],
+                "value": "comments",
+              },
+            },
+            "paramNames": Object {},
+            "routes": Array [
+              Route {
+                "handler": [Function],
+                "id": 3,
+                "method": "GET",
+                "parametersMap": Array [
+                  Array [
+                    "id",
+                    0,
+                  ],
+                ],
+                "path": "/posts/:id/",
+              },
+            ],
+            "value": "*",
+          },
+        },
+        "paramNames": Object {
+          "3": "id",
+          "6": "postId",
+          "7": "postId",
+        },
+        "routes": Array [
+          Route {
+            "handler": [Function],
+            "id": 2,
+            "method": "GET",
+            "parametersMap": Array [],
+            "path": "/posts/",
+          },
+        ],
+        "value": "posts",
+      },
+      "repos": Node {
+        "children": Object {
+          "*": Node {
+            "children": Object {
+              "*": Node {
+                "children": Object {
+                  "issues": Node {
+                    "children": Object {
+                      "*": Node {
+                        "children": Object {
+                          "labels": Node {
+                            "children": Object {
+                              "*": Node {
+                                "children": Object {},
+                                "paramNames": Object {},
+                                "routes": Array [
+                                  Route {
+                                    "handler": [Function],
+                                    "id": 9,
+                                    "method": "GET",
+                                    "parametersMap": Array [
+                                      Array [
+                                        "owner",
+                                        0,
+                                      ],
+                                      Array [
+                                        "repo",
+                                        1,
+                                      ],
+                                      Array [
+                                        "number",
+                                        2,
+                                      ],
+                                      Array [
+                                        "name",
+                                        3,
+                                      ],
+                                    ],
+                                    "path": "/repos/:owner/:repo/issues/:number/labels/:name/",
+                                  },
+                                ],
+                                "value": "*",
+                              },
+                            },
+                            "paramNames": Object {
+                              "9": "name",
+                            },
+                            "routes": Array [],
+                            "value": "labels",
+                          },
+                        },
+                        "paramNames": Object {},
+                        "routes": Array [],
+                        "value": "*",
+                      },
+                    },
+                    "paramNames": Object {
+                      "9": "number",
+                    },
+                    "routes": Array [],
+                    "value": "issues",
+                  },
+                  "keys": Node {
+                    "children": Object {
+                      "*": Node {
+                        "children": Object {},
+                        "paramNames": Object {},
+                        "routes": Array [
+                          Route {
+                            "handler": [Function],
+                            "id": 8,
+                            "method": "GET",
+                            "parametersMap": Array [
+                              Array [
+                                "owner",
+                                0,
+                              ],
+                              Array [
+                                "repo",
+                                1,
+                              ],
+                              Array [
+                                "id",
+                                2,
+                              ],
+                            ],
+                            "path": "/repos/:owner/:repo/keys/:id/",
+                          },
+                        ],
+                        "value": "*",
+                      },
+                    },
+                    "paramNames": Object {
+                      "8": "id",
+                    },
+                    "routes": Array [],
+                    "value": "keys",
+                  },
+                },
+                "paramNames": Object {},
+                "routes": Array [],
+                "value": "*",
+              },
+            },
+            "paramNames": Object {
+              "8": "repo",
+              "9": "repo",
+            },
+            "routes": Array [],
+            "value": "*",
+          },
+        },
+        "paramNames": Object {
+          "8": "owner",
+          "9": "owner",
+        },
+        "routes": Array [],
+        "value": "repos",
+      },
+      "users": Node {
+        "children": Object {
+          "*": Node {
+            "children": Object {},
+            "paramNames": Object {},
+            "routes": Array [
+              Route {
+                "handler": [Function],
+                "id": 4,
+                "method": "GET",
+                "parametersMap": Array [
+                  Array [
+                    "id",
+                    0,
+                  ],
+                ],
+                "path": "/users/:id/",
+              },
+            ],
+            "value": "*",
+          },
+        },
+        "paramNames": Object {
+          "4": "id",
+        },
+        "routes": Array [
+          Route {
+            "handler": [Function],
+            "id": 5,
+            "method": "GET",
+            "parametersMap": Array [],
+            "path": "/users/",
+          },
+        ],
+        "value": "users",
+      },
+    },
+    "paramNames": Object {},
+    "routes": Array [
+      Route {
+        "handler": [Function],
+        "id": 0,
+        "method": "GET",
+        "parametersMap": Array [],
+        "path": "/",
+      },
+    ],
+    "value": "",
+  },
+}
+`;
