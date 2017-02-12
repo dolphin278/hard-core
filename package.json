@@ -25,5 +25,8 @@
       "<rootDir>/src"
     ]
   },
-  "dependencies": {}
+  "dependencies": {},
+  "engines": {
+    "node": ">=6.3.1"
+  }
 }
