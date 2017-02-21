@@ -21,7 +21,7 @@
   "license": "MIT",
   "jest": {
     "testEnvironment": "node",
-    "testPathDirs": [
+    "roots": [
       "<rootDir>/src"
     ]
   },
